@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
         val videos: MutableList<VideoProperties> = mutableListOf()
 
 // Create and add 5 similar VideoProperties objects to the list
-        for (i in 1..5) {
+        for (i in 1..100) {
             val video = VideoProperties()
             val thumbnailUriString = "android.resource://${requireContext().packageName}/${R.drawable.thubnail_demo}"
             video.setThumbnail(thumbnailUriString)
