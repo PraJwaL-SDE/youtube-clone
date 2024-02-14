@@ -31,36 +31,59 @@
         android:gravity="center"
         android:layout_weight="1"
         >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/play_previous"
-            android:id="@+id/play_previous_video"
-            android:layout_weight="1"
-            />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/play_button"
-            android:id="@+id/exo_play"
-            />
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/pause"
-            android:id="@+id/exo_pause"
-            />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/play_next"
-            android:id="@+id/play_next_video"
+        <LinearLayout
+            android:id="@+id/leftArea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            />
+            android:gravity="center"
+            >
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play_previous"
+                android:id="@+id/play_previous_video"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/play_button"
+                android:id="@+id/exo_play"
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pause"
+                android:id="@+id/exo_pause"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightArea"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play_next"
+                android:id="@+id/play_next_video"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
 
     </LinearLayout>
     <LinearLayout
@@ -70,27 +93,29 @@
         android:gravity="end"
         >
         <ImageView
+            android:id="@+id/exo_fullscreen"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/enter_full_screen"
             android:gravity="end"
             />
     </LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:gravity="end"
         >
-        <com.google.android.material.slider.Slider
-            app:trackHeight="4dp"
-            android:id="@+id/exo_bottom_bar"
+        <SeekBar
+            android:id="@+id/seekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progressDrawable="@drawable/seekbar_progress"
-            app:trackColorActive="@color/black"
-            app:trackColorInactive="#9C27B0"
-            app:trackColor="@color/white"
+            android:thumbTint="#FF0000"
+            android:progressTint="#FF0000"
+            android:progress="50"
             />
 
     </LinearLayout>
